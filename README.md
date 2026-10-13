@@ -1,6 +1,6 @@
 # 📊 Atuária API
 
-[![CI](https://github.com/<seu-usuario>/atuaria-api/actions/workflows/ci.yml/badge.svg)](https://github.com/<seu-usuario>/atuaria-api/actions/workflows/ci.yml)
+[![CI](https://github.com/HadassaSM/atuaria-api/actions/workflows/ci.yml/badge.svg)](https://github.com/HadassaSM/atuaria-api/actions/workflows/ci.yml)
 
 API REST em **Python + FastAPI** com cálculos de **matemática atuarial de vida**: tábua de mortalidade, anuidades, seguros e planejamento de aposentadoria.
 
