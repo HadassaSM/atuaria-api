@@ -2,6 +2,8 @@
 
 [![CI](https://github.com/HadassaSM/atuaria-api/actions/workflows/ci.yml/badge.svg)](https://github.com/HadassaSM/atuaria-api/actions/workflows/ci.yml)
 
+**▶ API online: https://atuaria-api.onrender.com/docs** (documentação interativa; no plano gratuito, a primeira chamada pode levar ~50 s para "acordar" o servidor)
+
 API REST em **Python + FastAPI** com cálculos de **matemática atuarial de vida**: tábua de mortalidade, anuidades, seguros e planejamento de aposentadoria.
 
 A mortalidade segue a **lei de Gompertz-Makeham** com os parâmetros do *Standard Ultimate Survival Model* (Dickson, Hardy & Waters, *Actuarial Mathematics for Life Contingent Risks*):
@@ -24,7 +26,7 @@ A documentação interativa (Swagger) fica em **`/docs`**.
 ### Exemplo
 
 ```bash
-curl -X POST http://localhost:8000/aposentadoria/plano \
+curl -X POST https://atuaria-api.onrender.com/aposentadoria/plano \
   -H "Content-Type: application/json" \
   -d '{"idade_atual": 25, "idade_aposentadoria": 65, "renda_mensal": 5000, "taxa_juros": 0.04}'
 ```
@@ -74,9 +76,13 @@ app/
 tests/           # testes unitários e de API (pytest)
 ```
 
+## Deploy
+
+Publicada no [Render](https://render.com) a partir do `Dockerfile`, com configuração em [`render.yaml`](render.yaml). A cada push na `main`, o CI roda os testes, constrói a imagem e testa o container antes do Render publicar a nova versão.
+
 ## Tecnologias
 
-FastAPI · Pydantic v2 · Uvicorn · pytest · Ruff · Docker · GitHub Actions
+FastAPI · Pydantic v2 · Uvicorn · pytest · Ruff · Docker · GitHub Actions · Render
 
 ## Licença
 
